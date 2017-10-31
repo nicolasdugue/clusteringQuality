@@ -19,13 +19,17 @@ The agreement between the partitions returned slowly and monotonically decreases
 
 One can find the code in *quality_sampling.py* and results on our data in *results*.
 
-Exemple with IRIS Data :
-
-[Iris, K=2](results/IRIS-Binaire_2.png)
-[Iris, K=2](results/IRIS-Binaire_3.png)
-[Iris, K=2](results/IRIS-Binaire_4.png)
-[Iris, K=2](results/IRIS-Binaire_5.png)
-[Iris, K=2](results/IRIS-Binaire_6.png)
+## Exemple with IRIS Data
+### K = 2
+![Iris, K=2](results/IRIS-Binaire_2.png)
+### K = 3
+![Iris, K=2](results/IRIS-Binaire_3.png)
+### K = 4
+![Iris, K=2](results/IRIS-Binaire_4.png)
+### K = 5
+![Iris, K=2](results/IRIS-Binaire_5.png)
+### K = 6
+![Iris, K=2](results/IRIS-Binaire_6.png)
 
 ## References
 
