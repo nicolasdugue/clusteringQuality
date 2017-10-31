@@ -6,10 +6,10 @@ Based on the likelihood, they both define a way to penalize the model complexity
 
 If we consider the model that $K$-means allows to detect clusters that are Gaussians with identical spherical covariance matrices, we can write AIC and BIC according to the RSS (inertia).
 
-**BIC : **
+**BIC :** 
 ![BIC](images/BIC1.gif)
 
-**AIC : **
+**AIC :** 
 ![AIC](images/AIC1.gif)
 
 ## References
