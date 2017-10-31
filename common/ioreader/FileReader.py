@@ -15,6 +15,19 @@ def read_elm(file_path):
             cpt+=1
     return clustering
 
+def read_cod(file_path):
+    fichier=open(file_path)
+    cpt=0
+    centers=[]
+    for ligne in fichier:
+        if cpt != 0:
+            c=ligne.strip().split(" ")
+            c=list(map(float, c))
+            centers.append(c)
+        else:
+            cpt+=1
+    return centers
+
 
 # In python doc :
 #>>> row  = np.array([0, 3, 1, 0])

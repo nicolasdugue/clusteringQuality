@@ -14,18 +14,20 @@ import sys
 sys.path.append("common/ioreader")
 import FileReader
 
-def aic_k_best(data, clustering, cod):
+from math import log
+
+def bic_k_best(data, clustering, cod):
     center=FileReader.read_cod(cod)
     inertia=0
     for idx, vect in enumerate(data):
         dist=minkowski(vect,center[clustering[idx]],1)
         inertia+=dist *  dist
-    K,M=(len(center[0]), len(center))
-    return inertia + 2*M*K
+    k,m=(len(center[0]), len(center))
+    r,m=data.shape
+    return (r*log(inertia/r) +k*(m+1)* log(r))
 
-def aic_k(kmeansi, K, M):
+def bic_k(kmeansi, K, M):
     return kmeansi.inertia_ + 2*M*K
-
 
 data_dir="data"
 from os import listdir
@@ -39,17 +41,17 @@ for exp in data_dirs:
     cods.sort()
     elms = [join(exp,f) for f in listdir(exp) if ".elm" in f]
     elms.sort()
-    lowest_aic = np.infty
-    dico_aic = dict()
+    lowest_bic = np.infty
+    dico_bic = dict()
     n_best=0
     R, M = X.shape
     for elm,cod in zip(elms,cods):
         clustering=FileReader.read_elm(elm)
         n_components=len(set(clustering))
-        aic=aic_k_best(X, clustering, cod)
-        if n_components not in dico_aic or aic < dico_aic[n_components]:
-            dico_aic[n_components]=aic
-        if aic < lowest_aic:
-            lowest_aic = aic
+        bic=bic_k_best(X, clustering, cod)
+        if n_components not in dico_bic or bic < dico_bic[n_components]:
+            dico_bic[n_components]=bic
+        if bic < lowest_bic:
+            lowest_bic = bic
             n_best=n_components
-    print (exp,lowest_aic, n_best)
+    print (exp,lowest_bic, n_best)
