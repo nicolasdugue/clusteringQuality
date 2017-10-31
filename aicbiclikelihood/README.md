@@ -8,6 +8,10 @@ Based on the likelihood, they both define a way to penalize the model complexity
 
 ![AIC](images/aic.gif)
 
+## Code
+
+These criteria were implemented using sklearn with results from gaussian mixture models.
+
 ## References
 [1] Schwarz, G. (1978). Estimating the dimension of a model. *The annals of statistics*, 6(2), 461-464.
 
