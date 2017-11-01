@@ -24,10 +24,8 @@ def bic_k_best(data, clustering, cod):
         inertia+=dist *  dist
     k,m=(len(center[0]), len(center))
     r,m=data.shape
-    return (r*log(inertia/r) +k*(m+1)* log(r))
+    return (inertia +k*(m)* log(r))
 
-def bic_k(kmeansi, K, M):
-    return kmeansi.inertia_ + 2*M*K
 
 data_dir="data"
 from os import listdir

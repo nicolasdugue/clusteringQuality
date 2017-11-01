@@ -23,9 +23,6 @@ def aic_k_best(data, clustering, cod):
     K,M=(len(center[0]), len(center))
     return inertia + 2*M*K
 
-def aic_k(kmeansi, K, M):
-    return kmeansi.inertia_ + 2*M*K
-
 
 data_dir="data"
 from os import listdir

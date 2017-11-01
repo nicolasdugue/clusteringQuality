@@ -4,7 +4,7 @@
 The **Akaike Information Criterion (AIC, Akaike is the name of its author)** and the **Bayesian Information Criterion (BIC)**, also called Schwartze (the name of its author) Criterion were defined in the seventies.
 Based on the likelihood, they both define a way to penalize the model complexity [1][2].
 
-If we consider the model that $K$-means allows to detect clusters that are Gaussians with identical spherical covariance matrices, we can write AIC and BIC according to the RSS (inertia).
+If we consider that K-means returns clusters that are Gaussians with identical spherical covariance matrices and uniform cluster priors, we can write AIC and BIC according to the RSS (inertia), with L(k)=-1/2 RSS(k) according to [3].
 
 **BIC :** 
 ![BIC](images/BIC1.gif)
