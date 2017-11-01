@@ -8,6 +8,9 @@ Based on the likelihood, they both define a way to penalize the model complexity
 
 **AIC :**![AIC](images/aic.gif)
 
+with *n* the number of data, *k* the number of clusters, *q(k)* a function that describes the complexity of the model, and *L* the likelihood.
+Most of the time, *q(k)=2k*.
+
 ## Code
 
 These criteria were implemented using sklearn with results from gaussian mixture models.
