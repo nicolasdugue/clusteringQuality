@@ -1,7 +1,7 @@
 # AIC and BIC
 
 ## Definition
-The **Akaike Information Criterion (AIC, Akaike is the name of its author)** and the **Bayesian Information Criterion (BIC)**, also called Schwartze (the name of its author) Criterion were defined in the seventies.
+The **Akaike Information Criterion (AIC, Akaike is the name of its author)** and the **Bayesian Information Criterion (BIC)**, also called Schwarz (the name of its author) Criterion were defined in the seventies.
 Based on the likelihood, they both define a way to penalize the model complexity [1][2].
 
 **BIC :**![BIC](images/bic.gif)
@@ -9,7 +9,7 @@ Based on the likelihood, they both define a way to penalize the model complexity
 **AIC :**![AIC](images/aic.gif)
 
 with *n* the number of data, *k* the number of clusters, *q(k)* a function that describes the complexity of the model, and *L* the likelihood.
-Most of the time, *q(k)=2k*.
+Most of the time, *q(k)=k*.
 
 ## Code
 
