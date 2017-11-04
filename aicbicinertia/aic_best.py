@@ -21,7 +21,7 @@ def aic_k_best(data, clustering, cod):
         dist=minkowski(vect,center[clustering[idx]],1)
         inertia+=dist *  dist
     K,M=(len(center[0]), len(center))
-    return inertia + 2*M*K
+    return inertia + 2*K
 
 
 data_dir="data"
@@ -50,3 +50,4 @@ for exp in data_dirs:
             lowest_aic = aic
             n_best=n_components
     print (exp,lowest_aic, n_best)
+    print dico_aic

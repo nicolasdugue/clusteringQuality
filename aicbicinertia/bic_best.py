@@ -53,3 +53,4 @@ for exp in data_dirs:
             lowest_bic = bic
             n_best=n_components
     print (exp,lowest_bic, n_best)
+    print dico_bic
